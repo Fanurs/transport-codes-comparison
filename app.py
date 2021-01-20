@@ -7,6 +7,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+server = app.server
+
 app.layout = html.Div([html.H6("Change the value in the text box to see callbacks in action!"),
                        html.Div(["Input: ", dcc.Input(id='my-input', value='initial value', type='text')]),
                        html.Br(),
