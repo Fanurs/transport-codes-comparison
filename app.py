@@ -20,7 +20,7 @@ app.layout = html.Div([html.H6("Change the value in the text box to see callback
               Input(component_id='my-input', component_property='value'),
              )
 def update_output_div(input_value):
-    return 'Output: {}'.format(input_value)
+    return f'Output: {(input_value.upper())}'
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=9594)
+    app.run_server(debug=True, host='127.0.0.1', port=9594)
